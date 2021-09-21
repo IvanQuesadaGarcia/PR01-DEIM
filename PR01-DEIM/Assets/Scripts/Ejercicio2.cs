@@ -34,7 +34,7 @@ public class Ejercicio2 : MonoBehaviour
         while (aleatorio != 9)
         {
             print("No ha salido el 9, es " + aleatorio);
-            aleatorio = Random.Range(0, 15);
+            aleatorio = Random.Range(0, 1690);
         }
         print("¡Ha salido el 9!");
     }
