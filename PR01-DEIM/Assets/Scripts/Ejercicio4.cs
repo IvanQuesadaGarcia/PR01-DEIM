@@ -6,29 +6,23 @@ using UnityEngine.UI;
 public class Ejercicio4 : MonoBehaviour
 {
     int n = 0;
-    bool encendido = false;
     [SerializeField] Text miContador;
 
     // Start is called before the first frame update
     void Start()
     {
-     
+        
     }
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            if (encendido == false)
-            {
-                StartCoroutine("Contador");
-                encendido = true;
-            }
-            else
-            {
-                StopCoroutine("Contador");
-                encendido = false;
-            }
+            StartCoroutine("Contador");           
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            StopCoroutine("Contador");           
         }
     }
 
@@ -39,7 +33,6 @@ public class Ejercicio4 : MonoBehaviour
             n++;
             miContador.text = n.ToString();
             yield return new WaitForSeconds(1f);
-
         }
     }
 }
