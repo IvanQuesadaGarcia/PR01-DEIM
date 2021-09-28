@@ -20,5 +20,6 @@ public class Movimiento : MonoBehaviour
     {
         transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal") * speed * friction);
         transform.Translate(Vector3.up * Time.deltaTime * Input.GetAxis("Vertical") * speed * friction);
+        transform.Translate(Vector3.forward * Time.deltaTime * Input.GetAxis("Profundidad") * speed * friction); 
     }
 }
